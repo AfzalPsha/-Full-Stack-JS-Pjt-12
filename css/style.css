@@ -47,6 +47,9 @@ body {
 }
 
 /*----------------------------- navbar section ------------------------------*/
+.Mnav{
+    display: none;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -75,6 +78,33 @@ body {
     margin-bottom: 30px;
 }
 
+@media only screen and (max-width:1024px) {
+    
+ .navbar .list {
+    display: none;
+ }
+ .bttn{
+    display: none;
+ }
+ .Mnav{
+    display: block;
+    font-size: 34px;
+    color: #FFFFFF;
+ }
+ .webdesign-wrapper{
+    display: flex;
+    flex-direction: column;
+ }
+}
+@media only screen and (max-width:1120px){
+    .hero{
+        flex-direction: column;
+     }
+     .team-section .team-headline{
+        flex-wrap: wrap;
+     }
+}
+
 
 /*---------------------------- hero section ----------------------------------*/
 .hero {
@@ -82,8 +112,7 @@ body {
     justify-content: center;
     gap: 90px;
     align-items: center;
-    height: 85vh;
-    padding-bottom: 20px;
+    padding-bottom: 120px;
 }
 .hero-left .hero-image {
     width: 28rem;
@@ -151,7 +180,7 @@ body {
     padding-bottom: 60px;
 }
 .connecting .connecting-right .connecting-img {
-    width: 78rem;
+    width: 100%;
     height: 550px;
     overflow: hidden;
 }
@@ -186,7 +215,7 @@ body {
 }
 
 
-/*--------------------------------- webdesign section ----------------------------*/
+/*--------------------------------- web design section ----------------------------*/
 
 .webdesign-wrapper {
     background-color: var(--white);
@@ -239,7 +268,12 @@ body {
     object-fit: cover;
     object-position: right;
 }
-
+@media only screen and (max-width:960px){
+    .webdesign{
+        flex-direction: column;
+    }
+    
+}
 
 
 /*--------------------------------- marketing section ----------------------------*/
@@ -253,6 +287,12 @@ body {
     padding-top: 50px;
     padding-bottom: 80px;
     
+}
+@media only screen and (max-width:960px){
+    .marketing{
+        display: flex;
+        flex-direction: column;
+    } 
 }
 .marketing {
     max-width: 78rem;
@@ -295,7 +335,7 @@ body {
 
 /* judging */
 .judging {
-    max-width: 78rem;
+    max-width: fit-content;
     margin: 40px auto 0 auto;
     display: flex;
     justify-content: center;
@@ -329,6 +369,12 @@ body {
     object-fit: cover;
     object-position: center;
 }
+@media only screen and (max-width:960px){
+    .judging{
+        flex-direction: column;
+    }
+    
+}
 /* team section */
 .team-section {
     max-width: 78rem;
@@ -351,28 +397,28 @@ body {
     line-height: 30px;
     font-weight: 500;
 }
-.tema-info {
+.team-info {
     display: flex;
     justify-content: space-between;
     padding-top: 60px;
 }
-.tema-info .team-card .team-image {
+.team-info .team-card .team-image {
     width: 350px;
     height: 440px;
     overflow: hidden;
 }
-.tema-info .team-card .team-image img {
+.team-info .team-card .team-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
 }
-.tema-info .team-card h4 {
+.team-info .team-card h4 {
     font-size: 1.2rem;
     color: var(--text-dark);
     padding: 15px 0px;
 }
-.tema-info .team-card p {
+.team-info .team-card p {
     color: var(--text-dark-gray);
 }
 .team-section .team-btn {
@@ -381,6 +427,20 @@ body {
 }
 .team-section .team-btn button {
     padding: 20px 60px;
+}
+
+@media only screen and (max-width:1100px){
+    
+ 
+.team-section .team-headline{
+    flex-direction: column;
+ }
+ .team-info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ }
 }
 
 
@@ -448,4 +508,23 @@ body {
     background-color: rgba(255, 255, 255, 0.093);
     width: 100%;
     display: block;
+}
+@media only screen and (max-width: 1150px) {
+    .footer-wraper {
+        top:760vh
+    }
+    .footer-navbar {
+        gap: 40px;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .footer-wraper {
+        top:900vh
+    }
+}
+@media only screen and (max-width: 700px) {
+    .footer-wraper {
+        top:980vh
+    }
 }
